@@ -23,8 +23,9 @@ import type {
   PopupModuleNames,
   PageContextType,
 } from '~/entrypoints/types';
+import { getHomepageUrl } from './utils/config';
 
-export const GITHUB_URL = 'https://github.com/web-dahuyou/NiceTab';
+export const GITHUB_URL = getHomepageUrl();
 
 // 主题列表（供切换选择）
 export const ENUM_COLORS = {

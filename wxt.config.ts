@@ -7,6 +7,9 @@ export default defineConfig({
   modules: ['@wxt-dev/module-react'],
   vite: () => ({
     plugins: [svgr({ svgrOptions: { icon: true } })],
+    define: {
+      'process.env.HOMEPAGE_URL': JSON.stringify('https://github.com/wangwendong1024/NiceTab'),
+    },
   }),
   manifest: {
     name: 'Nice Tab Manager | 标签页管理器',
@@ -20,7 +23,8 @@ export default defineConfig({
       'favicon',
       'alarms',
     ],
-    homepage_url: 'https://github.com/web-dahuyou/NiceTab',
+   // homepage_url: 'https://github.com/web-dahuyou/NiceTab',
+    homepage_url: 'https://github.com/wangwendong1024/NiceTab',
     host_permissions: ['<all_urls>'],
     default_locale: 'zh_CN',
     content_security_policy: {
